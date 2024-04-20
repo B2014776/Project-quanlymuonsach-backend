@@ -7,10 +7,7 @@
 		"start": "nodemon app.js",
 		"test": "Nodejs , expressjs"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Pooong/quanlimuonsach_frontend.git"
-	},
+
 	"keywords": [
 		"expressJS",
 		"NodeJs",
@@ -19,11 +16,9 @@
 		"muon",
 		"sach"
 	],
-	"author": "Tran van be than",
+
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/Pooong/quanlimuonsach_frontend/issues"
-	},
+
 	"homepage": "https://github.com/Pooong/quanlimuonsach_frontend#readme",
 	"dependencies": {
 		"bcrypt": "^5.1.1",
