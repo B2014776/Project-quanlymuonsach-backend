@@ -12,7 +12,7 @@ const db = require("./app/utils/mongodb.util");
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "upload")));
+app.use('/upload', express.static(path.join(__dirname, 'upload')));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

@@ -30,6 +30,8 @@ class PublishedController {
 		try {
 			const TenNxb = req.body.TenNxb;
 			const DiaChi = req.body.DiaChi;
+			console.log(DiaChi);
+			console.log(TenNxb);
 			const existingPublished = await Published.findOne({ TenNxb });
 			if (existingPublished) {
 				return res.json({ update: "Nhà Xuất bản đã tồn tại" });

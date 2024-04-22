@@ -19,7 +19,7 @@ class Authentication {
 
 					const hashedPassword = await userServices.hashPassword(Password);
 					const ChucVu = req.body.position;
-					const Avatar = filename;
+					const Avatar = req.file.filename;
 					const existingUser = await NhanVien.findOne({ SoDienThoai });
 					if (existingUser) {
 						return res.json({ error: "Người dùng đã tồn tại" });
@@ -51,14 +51,15 @@ class Authentication {
 					if (!req.file) {
 						return res.status(500).json({ "error": "Chưa có image" })
 					}
-					const Ten = req.body.Ten;
-					const NgaySinh = req.body.NgaySinh;
-					const Phai = req.body.Phai;
-					const DiaChi = req.body.DiaChi;
-					const DienThoai = req.body.DienThoai;
-					const Password = req.body.Password;
+					const Ten = req.body.username;
+					const NgaySinh = req.body.birth;
+					const Phai = req.body.sex;
+					const DiaChi = req.body.address;
+					const DienThoai = req.body.phone;
+					const Password = req.body.password;
 					const Avatar = req.file.filename;
 					const existingUser = await DocGia.findOne({ DienThoai });
+					console.log(existingUser);
 					const hashedPassword = await userServices.hashPassword(Password);
 
 					if (existingUser) {

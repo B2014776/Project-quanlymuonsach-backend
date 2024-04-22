@@ -37,6 +37,7 @@ class BookController {
 
                  const filename =  req.file.filename ;
 				 req.body.HinhSach=filename;
+				 console.log(req.body)
 
                  const newSach = new  Sach(req.body);
                  newSach.save();
